@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력 양식</title>
+</head>
+
+<body>
+  <h1>input 태그</h1>
+
+  <h2>텍스트 관련 input</h2>
+
+  아이디: <input> <br><!-- 기본 한줄은 텍스트 상자 -->
+  비밀번호: <input type="password"> <br><!-- 기본 한줄은 텍스트 상자 -->
+  검색어: <input type="search"> <br><!-- 기본 한줄은 텍스트 상자 -->
+
+  <hr>
+
+  <label for="userId">아이디 : </label>
+  <input type="text" id="userId" placeholder="영문 숫자 포함 최대 8자리"> <br>
+  <label for="userPwd">비밀번호 : </label>
+  <input type="password" id="userPwd">
+  <label>검색어 : </label>
+  <input type="search" id="30">
+
+  기관명 <input type="text" value="원티드랩" readonly>
+
+  <h1>form 관련 태그</h1>
+  <form action="server/signup.do" method="post">
+    <fieldset>
+      <legend>회원가입</legend>
+      아이디 : <input type="text" maxlength="12" name="userId" required> <br>
+      비밀번호 : <input type="password" maxlength="15" name="userPwd" required> <br>
+
+      전화번호 : <input type="tel"> <br>
+      이메일 : <input type="email"> <br>
+      홈페이지 : <input type="url"> <br>
+
+
+      <input type="submit" value="회원가입">
+    </fieldset>
+  </form>
+
+  <form>
+    <fieldset>
+      <legend>게시글 작성폼</legend>
+      제목 : <input type="text" name="title" size="35" value=""> <br>
+      내용 : <textarea cols="35" placeholder="내용을 입력하세요." rows="10">기존의 게시글 내용</textarea>
+      <input type="submit" value="등록하기">
+    </fieldset>
+  </form>
+
+  <hr>
+
+  <h1>숫자, 날짜/시간 관련 input</h1>
+  <form action="">
+    <fieldset>
+      <legend>숫자관련</legend>
+      수량 : <input type="number" value="0" min="0" max="10">
+      점수 : <input type="range" min="0" max="100" value="20">
+    </fieldset>
+    <fieldset>
+      <legend>날짜 및 시간 관련</legend>
+      날짜 : <input type="date"><br>
+      월 : <input type="month"><br>
+      주 : <input type="week"><br>
+      시간 : <input type="time"><br>
+      날짜와 시간 : <input type="datetime-local"><br>
+    </fieldset>
+
+  </form>
+
+</body>
+
+</html>
